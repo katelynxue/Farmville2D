@@ -8,10 +8,27 @@ public class MyFarm {
 
     public MyFarm() {
 
+        grid = new Plot[3][4];
+
+        for(int x=0; x<grid.length; x++){
+            for (int i=0; i<grid[x].length; i++){
+                System.out.println("planting at row "+ x + " , column " + i);
+
+            }
+        }
         // declare a 2D grid of plots
+        grid = new Plot[3][4]; // 3 rows, 4 columns
+
+// fill a 2D grid of plots
 
         // construct a 2D grid of plots
-
+        for(int a = 0; a < grid.length; a++) { // rows
+            for (int b = 0; b < grid[a].length; b++) { // columns
+                System.out.println("planting at row " + a +
+                        ", column " + b);
+                grid[a][b] = new Plot();
+            }
+        }
 
         // methods to write together during class
         totalPlants();
